@@ -5,73 +5,124 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>로고운</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      background-color: #fff9f5;
       font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
       display: flex;
-      justify-content: center;
-      align-items: center;
       min-height: 100vh;
     }
 
-    .container {
-      text-align: center;
-      padding: 60px 40px;
+    /* 왼쪽 사이드바 */
+    .sidebar {
+      width: 200px;
+      min-height: 100vh;
+      padding: 40px 30px;
+      background: #fff;
+      border-right: 1px solid #f0f0f0;
+      position: fixed;
+      top: 0;
+      left: 0;
     }
 
-    .brand {
-      font-size: 52px;
-      font-weight: 700;
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
       color: #e8a598;
-      letter-spacing: 8px;
-      margin-bottom: 20px;
+      letter-spacing: 4px;
+      margin-bottom: 8px;
+      line-height: 1.3;
     }
 
-    .slogan {
-      font-size: 16px;
-      color: #b0917f;
-      letter-spacing: 2px;
-      margin-bottom: 60px;
-      line-height: 1.8;
-    }
-
-    .divider {
-      width: 40px;
-      height: 2px;
-      background-color: #f5c9bc;
-      margin: 0 auto 60px;
-    }
-
-    .contact {
-      font-size: 15px;
+    .tagline {
+      font-size: 10px;
       color: #c4a090;
       letter-spacing: 1px;
+      margin-bottom: 40px;
+      line-height: 1.6;
     }
 
-    .contact a {
-      color: #c4a090;
+    .menu-section {
+      margin-bottom: 30px;
+    }
+
+    .menu-section a {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: #333;
       text-decoration: none;
+      letter-spacing: 1px;
+      padding: 6px 0;
+      transition: color 0.2s;
     }
 
-    .contact a:hover {
+    .menu-section a:hover {
       color: #e8a598;
+    }
+
+    .menu-divider {
+      border: none;
+      border-top: 1px solid #f0f0f0;
+      margin: 20px 0;
+    }
+
+    .menu-section.sub a {
+      font-size: 12px;
+      font-weight: 400;
+      color: #888;
+    }
+
+    .menu-section.sub a:hover {
+      color: #e8a598;
+    }
+
+    /* 메인 컨텐츠 */
+    .main {
+      margin-left: 200px;
+      flex: 1;
+    }
+
+    .main img {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      display: block;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="brand">로고운</div>
-    <div class="slogan">짧은 순간을 아름답게<br>가성비 아이템들</div>
-    <div class="divider"></div>
-    <div class="contact">
+
+  <div class="sidebar">
+    <div class="logo">로고운</div>
+    <div class="tagline">짧은 순간을 아름답게<br>가성비 아이템들</div>
+
+    <div class="menu-section">
+      <a href="http://smartstore.naver.com/rogowoon2" target="_blank">BEST 10</a>
+      <a href="http://smartstore.naver.com/rogowoon2" target="_blank">NEW</a>
+      <a href="http://smartstore.naver.com/rogowoon2" target="_blank">TOPS</a>
+      <a href="http://smartstore.naver.com/rogowoon2" target="_blank">BOTTOM</a>
+      <a href="http://smartstore.naver.com/rogowoon2" target="_blank">SET</a>
+      <a href="http://smartstore.naver.com/rogowoon2" target="_blank">SALE</a>
+    </div>
+
+    <hr class="menu-divider">
+
+    <div class="menu-section sub">
+      <a href="http://smartstore.naver.com/rogowoon2" target="_blank">공지사항</a>
+      <a href="http://smartstore.naver.com/rogowoon2" target="_blank">질문과 대답</a>
+    </div>
+
+    <hr class="menu-divider">
+
+    <div class="menu-section sub">
       <a href="tel:010-4151-8385">010-4151-8385</a>
     </div>
   </div>
+
+  <div class="main">
+    <img src="rogowoonmain.png" alt="로고운 메인">
+  </div>
+
 </body>
 </html>
